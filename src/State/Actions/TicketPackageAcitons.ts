@@ -19,7 +19,7 @@ export const getTicketPackage =
       });
 
       const queryTicketPackage = await getDocs(
-        collection(db, "ticketPackages")
+        collection(db, "ticketPackages"),
       );
 
       queryTicketPackage.forEach((value) => {

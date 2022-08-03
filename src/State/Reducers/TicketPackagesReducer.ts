@@ -18,7 +18,7 @@ const initialState: defaultState = {
 
 const TicketPackageReducer = (
   state: defaultState = initialState,
-  action: TicketPackageDispatchTypes
+  action: TicketPackageDispatchTypes,
 ): defaultState => {
   switch (action.type) {
     case TICKET_PACKAGE_FAIL:

@@ -10,7 +10,7 @@ const { Title } = Typography;
 const TicketPackage = () => {
   const dispatch = useDispatch();
   const ticketPackagesState = useSelector(
-    (state: RootStore) => state.ticketPackages
+    (state: RootStore) => state.ticketPackages,
   );
 
   useEffect(() => {
