@@ -34,7 +34,7 @@ export const getTicketPackage =
           validDate: temp.validDate,
           expiryDate: temp.expiryDate,
         });
-
+        ticketPackage.reverse();
         dispatch({
           type: TICKET_PACKAGE_GET_SUCCESS,
           payload: ticketPackage,
