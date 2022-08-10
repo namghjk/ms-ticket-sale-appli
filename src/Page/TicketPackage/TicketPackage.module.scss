@@ -1,3 +1,5 @@
+@import "../../Styles/color";
+
 .main {
   display: flex;
   align-items: flex-start;
@@ -9,10 +11,27 @@
   padding: 24px;
 }
 
+.searchInput {
+  width: 446px;
+  background: $inputSearchColor2;
+}
+
 .titleContainer {
   margin-bottom: 32px;
 }
 
 .title {
   font-weight: 700 !important;
+}
+
+.feature {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.tableContainer {
+  flex-grow: 1;
+  width: 100%;
 }

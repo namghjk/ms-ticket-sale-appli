@@ -3,10 +3,11 @@ import {
   InvoiceTicketTypes,
   INVOICE_TICKET_FAIL,
   INVOICE_TICKET_GET_SUCCESS,
+  INVOICE_TICKET_GET_SUCCESS_WITH_FILTER,
   INVOICE_TICKET_LOADING,
 } from "../ActionTypes/InvoiceTicketTypes";
 
-interface defaultState {
+export interface defaultState {
   loading: boolean;
   error?: Error;
   current?: InvoiceTicketTypes[];
@@ -30,11 +31,17 @@ const InvoiceTicketReducer = (
 
     case INVOICE_TICKET_LOADING:
       return {
-        loading: false,
+        loading: true,
         current: state.current,
       };
 
     case INVOICE_TICKET_GET_SUCCESS:
+      return {
+        loading: false,
+        current: action.payload,
+      };
+
+    case INVOICE_TICKET_GET_SUCCESS_WITH_FILTER:
       return {
         loading: false,
         current: action.payload,
